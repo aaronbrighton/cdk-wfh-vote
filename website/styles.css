@@ -1,0 +1,118 @@
+/*** Chart ***/
+
+.bar{
+    height: 30px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 30px;
+    font-size: 14px;
+    color: #303030;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+.bar::before{
+content: '';
+width: 100%;
+position: absolute;
+left: 0;
+height: 30px;
+top: 0;
+z-index: -2;
+background: #ecf0f1;
+}
+.bar::after{
+content: '';
+background: #2ecc71;
+height: 30px;
+transition: 0.7s;
+display: block;
+width: 100%;
+-webkit-animation: bar-before 1 1.8s;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+@-webkit-keyframes bar-before{
+0%{
+    width: 0px;
+}
+100%{
+    width: 100%;
+}
+}
+
+.bar_wfh::after{
+    max-width: 0%;
+}
+.bar_mix::after{
+    max-width: 0%;
+}
+.bar_off::after{
+    max-width: 0%;
+}
+
+/*** Company Name Autocomplete Events ***/ 
+
+/* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 16px Arial;  
+  }*/
+  
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /*input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }*/
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }

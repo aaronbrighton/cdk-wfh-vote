@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script>
+		window.location.hostname.startsWith('www.') && window.location.replace(window.location.protocol+'//'+window.location.hostname.slice(4)+window.location.pathname+window.location.hash);
+	</script>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Afraid to tell your companies management that you want to continue to work from home? Tell them anonymously using this free survey.">
+	
+	<!-- Facebook -->
+	<meta property="og:title" content="Want to work from home? Vote now!">
+	<meta property="og:description" content="Afraid to tell your companies management that you want to continue to work from home? Tell them anonymously using this free survey.">
+	<meta property="og:image" content="https://wfh.vote/img/twitter-splash.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="675">
+	<meta property="og:url" content="https://wfh.vote/">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Want to work from home? Vote now!">
+	<meta name="twitter:description" content="Afraid to tell your companies management that you want to continue to work from home? Tell them anonymously using this free survey.">
+	<meta name="twitter:image" content="https://wfh.vote/img/twitter-splash.png">
+
+	<!-- LinkedIn -->
+
+    <title>Want to work from home? Vote now!</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+	<script>
+		window._config = {
+			apiEndpoint: `${window.location}api`
+		}
+	</script>
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<div>
+						<figure><img src="img/info_graphic_1.png" alt="" class="img-fluid"></figure>
+						<h2>Want to continue to work from home?</h2>
+						<p>Afraid to tell your company's management that you want to continue to work from home?  Contribute your company to this survey <b>anonymously</b>.</p>
+						<p>Once we've received enough votes for your company, we'll reach out to your company's management and advocate for you and your team!</p>
+						<a href="#start" class="btn_1 rounded mobile_btn">Vote Now!</a>
+					</div>
+					<div class="copy"></div>
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						<form id="wrapped" method="POST" onsubmit="event.preventDefault();">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+								<div class="step">
+									<h3 class="main_question"><strong>1/3</strong>Where do you prefer to work?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Work from home
+											<input type="radio" name="voteOption" value="vote_wfh" class="required" onchange="getVals(this, 'voteOption');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Combination
+											<input type="radio" name="voteOption" value="vote_mix" class="required" onchange="getVals(this, 'voteOption');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Office
+											<input type="radio" name="voteOption" value="vote_office" class="required" onchange="getVals(this, 'voteOption');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>			
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>2/3</strong>What company do you work?</h3>
+									<div class="form-group">
+										<input type="text" name="companyName" id="companyName" class="form-control required" placeholder="Your company's name (required)">
+									</div>
+									<p><a href="#" data-toggle="modal" data-target="#terms-txt">How we use your data</a></p>
+									<!-- /row -->
+								</div>
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>3/3</strong>Who should we share results with?</h3>
+									<div class="form-group">
+										<input type="text" name="contactName" id="contactName" class="form-control" placeholder="Your manager's name (optional)">
+									</div>
+									<div class="form-group">
+										<input type="email" name="contactEmail" id="contactEmail" class="form-control" placeholder="Your manager's email (optional)">
+									</div>
+									<p>Providing this information helps us know who best to share your company's survey results with once we've collected enough votes.</p>
+									<p><a href="#" data-toggle="modal" data-target="#terms-txt">How we use your data</a></p>
+								</div>
+								<!-- /step-->
+								<div class="submit step">
+									<h3 class="main_question">Results for ...</h3>
+									<div class="summary">
+										<div class="graph-cont">
+											<div class="bar bar_wfh">Work from home (loading...)</div>
+											<div class="bar bar_mix">Combination (loading...)</div>
+											<div class="bar bar_office">Office (loading...)</div>
+										</div>
+										<p></p>
+										<p>By sharing, you're helping others gain the flexibility they desire while <b><a href="#" data-toggle="modal" data-target="#advantages-txt">saving lives and the planet</a></b> at the same time!</p>
+										<p>In Canada? Did you know the official <a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/covid-alert.html" target="_blank">COVID Alert app</a> is heavily focused on <a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/covid-alert.html#a1" target="_blank">privacy</a>?  Consider installing it today! <strong>Wfh.vote is not associated with the Canadian government.</strong></p>
+										<!--<p><a href="#" data-toggle="modal" data-target="#contact-txt">Contact us!</a></p>-->
+									</div>
+								</div>
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="forward" class="forward">Next</button>
+								<div class="row">
+									<!--<p><a href="#" data-toggle="modal" data-target="#contact-txt">Contact us!</a></p>-->
+								</div>
+								<div class="row" id="socialButtons" style="display:none;">
+									<div class="col-4" style="text-align:center">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwfh.vote%2F" class="socialButton" title="Share on Facebook" target="_blank"><img src="img/facebook.png" alt="Facebook" height="22"></a>
+									</div>
+									<div class="col-4" style="text-align:center">
+										<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwfh.vote%2F&hashtags=WorkFromHome&text=Afraid%20to%20tell%20your%20company%27s%20management%20that%20you%20want%20to%20work%20from%20home%3F%20Vote%20and%20let%20%23wfhvote%20advocate%20for%20you%3A%20" class="socialButton" title="Share on Twitter" target="_blank"><img src="img/twitter.png" alt="Twitter" height="22"></a>
+									</div>
+									<div class="col-4" style="text-align:center">
+										<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwfh.vote%2F" class="socialButton" title="Share on LinkedIn" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" height="22"></a>
+									</div>
+								</div>
+								<p></p>
+								<div class="row" id="covidApp" style="display:none;">
+									<div class="col-2"></div>
+									<div class="col-2" style="text-align:center">
+										<a href="https://apps.apple.com/ca/app/id1520284227" title="Download on the App Store" target="_blank"><img src="img/app-store-eng.png" title="Download on the App Store" alt="Download on the App Store" height="35"></a>
+									</div>
+									<div class="col-2"></div>
+									<div class="col-2" style="text-align:center">
+										<a href="https://play.google.com/store/apps/details?id=ca.gc.hcsc.canada.stopcovid" title="Get it on Google Play" target="_blank"><img src="img/google-play-eng.png" title="Get it on Google Play" alt="Get it on Google Play" height="35"></a>
+									</div>
+									<div class="col-2"></div>
+								</div>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+	
+	<!-- Modal terms -->
+	<div class="modal fade" id="advantages-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">A giant leap forward for society</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p><b>Work life balance and personal savings</b> can be greatly improved through a reduction of time spent needlessly commuting.  In the 5 largest cities in the U.S. and Canada, commuters spend on average between 250 and 500 hours a year commuting<sup><a href="https://www.geotab.com/time-to-commute/" target="_blank">[1]</a><a href="https://globalnews.ca/news/3887057/toronto-commute-long-canada/" target="_blank">[2]</a></sup>, <strong>that's the equivalent of an extra 6-12 weeks of vacation each year!</strong> Not to mention the money saved not having to pay for gas and/or transit fare.</p>
+					<p><b>Climate change & health</b> stands to benefit significantly.  When social isolation rules were put in place around the world at the beginning of the COVID-19 response, some cities saw <strong>PM2.5 particulate matter concentrations reduced by as much as 60%!</strong><sup><a href="https://www.geotab.com/time-to-commute/" target="_blank">[1]</a></sup> More than <strong>4.3 million people die permaturely each year</strong> due to outdoor air pollution linked to PM2.5 particulate matter<sup><a href="https://ourworldindata.org/air-pollution-post" target="_blank">[1]</a></sup>. On average <strong>3,700 people lose their lives</strong> in road collisions every day<sup><a href="https://ourworldindata.org/air-pollution-post" target="_blank">[1]</a></sup>.</p>
+					<p><b>Reduced operating costs</b> are possible due to downsizing of existing brick-and-mortar facilities (offices).  Companies spend as much as 20% of their revenue on rent<sup><a href="https://smallbusiness.chron.com/percentage-rent-should-pay-according-business-gross-income-71111.html" target="_blank">[1]</a><a href="http://www.acre.culverhouse.ua.edu/posts/2017/03/28/rent-to-revenue-ratio-and-why-its-important-to-your-business" target="_blank">[2]</a></sup>. With a flexible work from home policy, companies could provide on-site workers with better/larger work spaces.  Companies could hire more staff, grow faster, reduce prices, or even increase wages/benefits. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal climate -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">How we use your data</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p><b>Survey data</b> is collected anonymously, containing only your work from home preferences, the company you work for, and (optionally) a contact at your company for us to reach out to and advocate on behalf of you and your team.</p>
+					<p><b>Data protection</b> is taken very seriously, and while we don't collect any identifiable information about you, the optional contact at your company that you may provide is identifiable information. This contact's information is protected by <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html" target="_blank">industry standard encryption</a>, is not shared publicly, and will only be used by us to advocate on your behalf for increased work from home flexibility. <strong>We will not sell or share this information with other companies.</strong></p>
+					<p><b>Tracking & cookies</b> are used to ensure the integrity of the polling system, specifically to prevent repeat voting and/or other malicious attacks against our backend systems.</p>
+					<p><b>Third parties</b> are integral to making this survey site a reality.  This application is hosted on AWS (<a href="https://aws.amazon.com/" target="_blank">Amazon Web Services</a>), integrated with <a href="https://www.hcaptcha.com/">hCaptcha</a>.  While we make every effort to limit how these third parties track you, in some cases they may track you beyond the purposes of this site.</p>
+					<p><b>Sharing on social media</b> will make or break this survey site's success.  While we strongly encourage you to help spread the word about this survey site, you should be aware that social networks such as: <a href="https://www.facebook.com/">Facebook</a>, <a href="https://twitter.com/">Twitter</a>, and <a href="https://www.linkedin.com/">LinkedIn</a>, may track you beyond the purposes of this site and in some cases (for example, when you're the first vote for a given company) can be used to reveal which work from home preference you voted for.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="contact-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Contact Us</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<b>Your Email</b><input type="text" name="contactMessageEmail" id="contactMessageEmail" class="form-control" placeholder="Your email address">
+					</div>
+					<div class="form-group">
+						<b>Message</b><input type="text" name="contactMessage" id="contactMessage" class="form-control" placeholder="What would you like to say?">
+					</div>
+					<button type="button" name="sendMessage" id="sendMessage" class="forward">Send Message</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!-- Wizard script -->
+	<script src="js/survey_func.js"></script>
+
+	<!-- wfhsurvey scripts -->
+	<script src="js_wfhsurvey/surveyApi.js"></script>
+	<script src="js_wfhsurvey/eventHandlers.js"></script>
+</body>
+</html>

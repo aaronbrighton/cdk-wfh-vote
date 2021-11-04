@@ -81,10 +81,6 @@ export class WfhVoteStack extends cdk.Stack {
       environment: {
         CompaniesStaticDumpS3Bucket: cfToS3.s3Bucket?.bucketName || '',
       },
-      architectures: [
-        lambda.Architecture.ARM_64,
-      ],
-      runtime: lambda.Runtime.PYTHON_3_8,
     });
     streamCompaniesLambda.addEventSource(new DynamoEventSource(companiesTable, {
       startingPosition: lambda.StartingPosition.TRIM_HORIZON,
